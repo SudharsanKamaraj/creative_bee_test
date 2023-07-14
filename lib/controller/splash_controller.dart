@@ -10,7 +10,6 @@ class SplashController extends GetxController {
   void checkLoginStatus() async {
     await Future.delayed(const Duration(seconds: 3));
     String isLogin = await storeLocal.read(key: 'isLogin') ?? "false";
-    Get.to(const LoginPage());
     if (isLogin == "true") {
       Get.to(const DashboardScreen());
     } else {

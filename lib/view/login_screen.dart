@@ -14,7 +14,6 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   late String _emailInputVal = "";
-  late String _passwordInputVal = "";
   bool isVisible = true;
   bool _obscured = true;
   final textFieldFocusNode = FocusNode();
@@ -90,9 +89,6 @@ class _LoginPageState extends State<LoginPage> {
                       return AppString.PLZ_ENTER_PASS;
                     }
                     return null;
-                  },
-                  onChanged: (inputValue) {
-                    _passwordInputVal = inputValue;
                   },
                   focusNode: textFieldFocusNode,
                   obscuringCharacter: "*",
